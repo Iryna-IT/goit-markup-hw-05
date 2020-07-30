@@ -93,8 +93,7 @@ body {
 .socials-link:hover,
 .clients-link:hover,
 /* link Portfolio */
-.filter-link:hover,
-.projects-link:hover {
+.filter-link:hover {
   color: var(--accent-color);
 }
 
@@ -107,8 +106,7 @@ body {
 .socials-link,
 .clients-link,
 /* link Portfolio */
-.filter-link,
-.projects-link {
+.filter-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -179,7 +177,7 @@ body {
 .main-navigation-link:not(.logo),
 .contacts-link {
   padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-bottom: 32px; */
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -188,19 +186,25 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-navigation .current:hover::after,
-.main-navigation .current:focus::after {
+.main-navigation .current::after,
+.main-navigation .current::after {
   content: ' ';
   display: flex;
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
   margin-top: 28px;
+  */
 }
 
-.main-navigation .current:hover,
-.main-navigation .current:focus {
-  padding-bottom: 0px;
+.main-navigation-link:not(.logo):hover::after,
+.main-navigation-link:not(.logo):focus::after {
+  content: ' ';
+  display: flex;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  margin-top: 28px;
 }
 
 /* Contacts */
@@ -594,6 +598,7 @@ section {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
+  color: var(--text-color-main);
 }
 
 .projects-overlay {
