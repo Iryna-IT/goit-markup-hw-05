@@ -203,8 +203,15 @@ body {
   display: flex;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--accent-color);
+  background-color: transparent;
   margin-top: 28px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-navigation-link:not(.logo):hover::after,
+.main-navigation-link:not(.logo):focus::after {
+  background-color: var(--accent-color);
 }
 
 /* Contacts */
